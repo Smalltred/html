@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function demo(){
+            document.getElementById("demo1").innerText = "我很好"
+        }
+    </script>
+</head>
+<body>
+<p id="demo"></p>
+<!--先解析body后执行js命令-->
+<script>
+    document.getElementById("demo").innerText = "你好世界"
+</script>
+<!--点击执行函数-->
+<p id="demo1" onclick="demo()">你好吗？</p>
+<!--<script>demo()</script>-->
+</body>
+</html>
