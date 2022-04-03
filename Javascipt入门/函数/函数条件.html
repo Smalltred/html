@@ -5,13 +5,18 @@
     <title></title>
 </head>
 <body>
+<p id="demo"></p>
 <script>
     function myFunc(a, b) {
         if (a > b) {
-            return;
+//            条件判断
+            return null;
         }
         x = a * b;
+        return x;
     }
+
+    document.getElementById("demo").innerText = myFunc(16, 15);
 </script>
 </body>
 </html>
