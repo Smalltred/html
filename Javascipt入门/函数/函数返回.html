@@ -6,13 +6,25 @@
 </head>
 <body>
 <p id="demo"></p>
+<p id="demo1"></p>
 <script>
-    function myFunc(){
+    var c = 20;
+    var d = 40;
+
+    function myFunc() {
         let a = 10;
         let b = 20;
         return a + b;
     }
+
     document.getElementById("demo").innerText = myFunc()
+
+    function myFunc1() {
+//        this指向全局
+        return this.c + this.d;
+    }
+
+    document.getElementById("demo1").innerText = myFunc1()
 </script>
 </body>
 </html>
