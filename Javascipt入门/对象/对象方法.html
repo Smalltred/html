@@ -5,6 +5,20 @@
     <title></title>
 </head>
 <body>
-
+<p id="demo"></p>
+<script>
+    var data = {
+        a: "1213",
+        b: "你好",
+//        在一个对象里也可以使用函数
+//        对象是像一个键值对的容器
+        FullName: function () {
+            return this.a + this.b
+        }
+    }
+    document.getElementById("demo").innerText = data.FullName();
+//    对象方法
+    console.log(data.FullName())
+</script>
 </body>
 </html>
