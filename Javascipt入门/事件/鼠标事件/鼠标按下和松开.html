@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p onmousedown="myFunc(this,'red')" onmouseup="myFunc(this, 'black')">当鼠标按下时，元素会变红，松开时会变绿</p>
+<script>
+    function myFunc(e, clr) {
+        e.style.color = clr;
+    }
+</script>
+</body>
+</html>
