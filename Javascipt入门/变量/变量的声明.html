@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 在函数外声明的变量都为全局变量
+    var a = 123;
+
+    function myFunc() {
+//  let 作用域也只是在内部生效
+//  作用域是块级，只在当前代码块作用域生效
+        let b = 1234;
+//  直接声明变量默认为全局变量
+        c = 12345;
+//  在变量中使用var声明变量时，作用域也只在函数内使用
+        var d = 321;
+//  在函数内使用 var 声明一个变量作用域在函数内
+        console.log("全局变量:" + a);
+        console.log("局部变量:" + b);
+        console.log("函数内的var变量:" + d);
+    }
+
+    //    报错 在代码块外不能使用函数内的 let声明的变量
+    //    console.log("代码块外:" + b);
+    //    报错 函数内的var 作用域也只在函数内使用 在外部使用
+    //    console.log("函数内的var声明的变量:" + d)
+    myFunc()
+    console.log("函数内的全局变量:" + c);
+</script>
+</body>
+</html>
