@@ -5,7 +5,13 @@
     <title></title>
 </head>
 <body>
-<p onmousedown="myFunc(this,'red')" onmouseup="myFunc(this, 'black')">当鼠标按下时，元素会变红，松开时会变绿</p>
+<!--按下onmousedown 松开onmouseup-->
+<p onmousedown="myFunc(this,'red')" onmouseup="myFunc(this, 'green')">
+    当鼠标按下时，元素会变红，松开时会变绿</p>
+<p onclick="myFunc(this, 'red')" onmouseout="myFunc(this, 'black')">点击时变红色, 移开恢复正常</p>
+<p onmouseover="myFunc(this, 'yellow')" onmouseout="myFunc(this, 'black')">鼠标悬浮变黄</p>
+<p>上方</p>
+<p onmouseenter="myFunc(this, 'purple')" onmouseleave="myFunc(this, 'black')">在元素上放变紫</p>
 <script>
     function myFunc(e, clr) {
         e.style.color = clr;
